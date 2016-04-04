@@ -82,21 +82,21 @@
 						$('.main.style1')
 							.scrollex({
 								mode:		'middle',
-								delay:		100,
+								delay:		10,
 								initialize:	function() { $(this).addClass('inactive'); },
 								terminate:	function() { $(this).removeClass('inactive'); },
 								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
+								// leave:		function() { $(this).addClass('inactive'); }
 							});
 
 						$('.main.style2')
 							.scrollex({
 								mode:		'middle',
-								delay:		100,
+								delay:		10,
 								initialize:	function() { $(this).addClass('inactive'); },
 								terminate:	function() { $(this).removeClass('inactive'); },
 								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
+								// leave:		function() { $(this).addClass('inactive'); }
 							});
 
 					// Work.
@@ -104,7 +104,7 @@
 							.scrollex({
 								top:		'40vh',
 								bottom:		'30vh',
-								delay:		50,
+								delay:		10,
 								initialize:	function() {
 
 												var t = $(this);
@@ -136,21 +136,21 @@
 												});
 
 											},
-								leave:		function(t) {
-
-												var t = $(this),
-													rows = t.find('.row.images'),
-													length = rows.length,
-													n = 0;
-
-												rows.each(function() {
-													var row = $(this);
-													window.setTimeout(function() {
-														row.addClass('inactive');
-													}, 100 * (length - n++));
-												});
-
-											}
+								// leave:		function(t) {
+								//
+								// 				var t = $(this),
+								// 					rows = t.find('.row.images'),
+								// 					length = rows.length,
+								// 					n = 0;
+								//
+								// 				rows.each(function() {
+								// 					var row = $(this);
+								// 					window.setTimeout(function() {
+								// 						row.addClass('inactive');
+								// 					}, 100 * (length - n++));
+								// 				});
+								//
+								// 			}
 							});
 
 					// Contact.
@@ -211,7 +211,7 @@
 
 						// Update scrolly links.
 							$('a[href^=#]').scrolly({
-								speed: 1500,
+								speed: 900,
 								offset: $header.outerHeight() - 1
 							});
 
